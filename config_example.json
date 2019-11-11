@@ -2,5 +2,6 @@
 	"LOGIN_SERVER": "smtp.gmail.com",
 	"USER": "a@gmail.com",
 	"PASS": "abc",
-	"TARGET_LIST": "./targets.txt"
+	"TARGET_LIST": "./targets.txt",
+	"CONTENT": "emails/test1.txt"
 }

@@ -3,30 +3,28 @@ Send stuff in bulk
 """
 
 import smtplib
-from json import load
+from json import loads
 
-# TODO: make content selectable (via runtime config file)
-content = r"test"
-
+# Load runtime settings & targets
 with open("./config.json", 'r') as config_stream:
-    config = load(config_stream)
-    LOGIN_SERVER = config["LOGIN_SERVER"]
-    USER = config["USER"]
-    PASS = config["PASS"]
-    TARGET_LIST = config["TARGET_LIST"]
+    config = loads(config_stream.read())
 
-with open(TARGET_LIST, 'r') as targets:
+with open(config["TARGET_LIST"], 'r') as targets:
     recipients = [t for t in targets]
 
-# Authenticate
-server = smtplib.SMTP_SSL(LOGIN_SERVER, 465)
-server.login(USER, PASS)
-print("logged in as USER {}.".format(USER))
+content = open(config['CONTENT']).read()
 
-# send emails
+# Authenticate user
+server = smtplib.SMTP_SSL(config['LOGIN_SERVER'], 465)
+server.login(config['USER'], config['PASS'])
+print("logged in as USER {}.".format(config['USER']))
+
+# Send emails
 for r in recipients:
-    server.sendmail(USER, r, content)
-    print("send email to address {}.".format(r.rstrip()))
+    try:
+        server.sendmail(config['USER'], r, content)
+        print("sent email to address `{}`".format(r.rstrip()))
+    except:
+        print("[ERROR] failed to send email to address `{}`".format(r.strip()))
 
-# clean up
 server.close()

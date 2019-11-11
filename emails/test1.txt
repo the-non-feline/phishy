@@ -1,0 +1,8 @@
+From: Mr. Bot
+MIME-Version: 1.0
+Content-type: text/html
+Subject: Email Test
+
+This is normal text.
+
+<h1><b>This is HTML-formatted text.</b></h1>
