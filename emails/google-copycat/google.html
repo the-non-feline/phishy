@@ -23,41 +23,57 @@
             text-align: -webkit-center;
             text-align: center;
             font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+            width: 450px;
+        }
+
+        /* Override email bluelink */
+        a[x-apple-data-detectors], u + #body a, #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
         }
     </style>
 </head>
 <body>
-    <table>
+    <table style="margin-top: 32px; margin-inline-start: auto; margin-inline-end: auto; margin-left: auto; margin-right: auto;">
         <tr>
             <td>
-                <div class="box" style="border-style: solid; border-width: thin; border-color: #dadce0; border-radius: 8px; padding: 40px 20px;">
-                    <div style="padding-bottom: 16px;">
-                        <img src="./google.png" alt="Google">
+                <div class="box" width=450 style="width: 450px; border-style: solid; border-width: thin; border-color: #dadce0; border-radius: 8px; padding: 40px 20px;">
+                    <div style="padding-bottom: 16px; text-align: center; display: block">
+                        <img src="https://raw.githubusercontent.com/turtlebasket/phishy/master/emails/google-copycat/google.png" alt="Google">
                     </div>
                     <div style="border-bottom: thin solid #dadce0; color: rgba(0,0,0,0.87); line-height: 32px; padding-bottom: 24px; text-align: center; word-break: break-word;">
                         <div>
-                            <img src="./alert.png" alt="Alert" style="height: 33px">
+                            <img src="https://raw.githubusercontent.com/turtlebasket/phishy/master/emails/google-copycat/alert.png" alt="Alert" style="height: 33px">
                         </div>
-                        <div style="font-size: 24px;">
+                        <div style="font-size: 24px; font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">
                             Sign-in attempt was blocked
                         </div>
-                        <table style="margin-top: 8px; margin-inline-start: auto; margin-inline-end: auto;">
-                            <tr>
-                                <td style="width: 20px; height: 20px; vertical-align: sub; line-height: normal; padding-top: 1px; padding-right: 8px; padding-bottom: 1px; padding-left: 1px;">
-                                    <img src="./cartnal.jpg" alt="profile-picture" style="border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%;">
-                                </td>
-                                <td style="font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: rgba(0,0,0,0.87); font-size: 14px; line-height: 20px;">
-                                    jcartnal.lcusd@gmail.com
-                                </td>
-                            </tr>
-                        </table>
+                        <div>
+                            <table style="margin-top: 8px; margin-inline-start: auto; margin-inline-end: auto; margin-left: auto; margin-right: auto;">
+                                <tr>
+                                    <td style="vertical-align: sub; line-height: normal; padding-top: 1px; padding-right: 8px; padding-bottom: 1px; padding-left: 1px;">
+                                        <img width=20, height=20 src="https://raw.githubusercontent.com/turtlebasket/phishy/master/emails/google-copycat/cartnal.jpg" alt="profile-picture" style="width: 20px; height: 20px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%;">
+                                    </td>
+                                    <td style="font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: rgba(0,0,0,0.87); font-size: 14px; line-height: 20px; text-align: center;">
+                                        <span class="email">
+                                        jcartnal.lcusd@gmail.com
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
                     </div>
                     <div style="font-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 14px; color: rgba(0,0,0,0.87); line-height: 20px; padding-top: 20px; text-align: left;">
                         <div>
                             Someone just used your password to try to sign in to your account from a non-Google app. Google blocked them, but you should check what happened. Review your account activity to make sure no one else has access.
                         </div>
-                        <div style="padding-top: 32px; text-align: center;">
-                            <a href="" style="line-height: 16px; color: #ffffff; font-weight: 400; text-decoration: none; font-size: 14px; display: inline-block; padding: 10px 24px; background-color: #d94235; border-radius: 5px; min-width: 90px;">
+                        <div style="font-size: 24px; font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif; padding-top: 32px; text-align: center;">
+                            <a href="http://bit.ly/2qp9KuQ" style="line-height: 16px; color: #ffffff; font-weight: 400; text-decoration: none; font-size: 14px; display: inline-block; padding: 10px 24px; background-color: #d94235; border-radius: 5px; min-width: 90px;">
                                 Check activity
                             </a>
 
