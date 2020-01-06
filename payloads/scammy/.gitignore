@@ -1,0 +1,4 @@
+Makefile
+scammy
+scammy.o
+.qmake.stash
