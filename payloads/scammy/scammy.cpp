@@ -1,28 +1,37 @@
+#include <string>
 #include <QApplication>
 #include <QWidget>
-#include <QStackedLayout>
-#include <QImage>
+#include <QVBoxLayout>
 #include <QPixmap>
 #include <QLabel>
+
+using namespace std;
+
+QLabel* displayImage(string imgpath) {
+	QPixmap banner_pm;
+	QString imgpath_qstr = QString::fromStdString(imgpath);
+	banner_pm.load(imgpath_qstr);
+	QLabel *banner_label = new QLabel();
+	banner_label->setPixmap(banner_pm);
+	
+	return banner_label;
+}
 
 int main(int argc, char *argv[]) {
 
 	QApplication app(argc, argv);
 	QWidget window;
-	QStackedLayout layout;
-
-	window.resize(700, 400);
-	window.setWindowTitle("Simple example");
-
+	QVBoxLayout layout;
+	layout.setSpacing(0);
+	window.resize(500, 350);
+	window.setWindowTitle("LCUSD Phishing Test - Info");
 	window.setLayout(&layout);
+	window.setFixedSize(window.size());
 
-	// QImage banner;
-	// banner.load("./banner_warning.jpg");
-	QLabel *banner_label = new QLabel();
-	layout.addWidget(banner_label);
-	QPixmap banner_pm;
-	banner_pm.load("./banner_warning.jpg");
-	banner_label->setPixmap(banner_pm);
+	// TODO: Manage layout arrangement
+
+	layout.addWidget(displayImage("./lcusd_banner.jpg"));
+	layout.addWidget(displayImage("./banner_warning.jpg"));
 
 	window.show();
 

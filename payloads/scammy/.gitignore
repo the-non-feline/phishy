@@ -1,4 +1,6 @@
 Makefile
 scammy
+scammy.exe
 scammy.o
 .qmake.stash
+out.pdf
